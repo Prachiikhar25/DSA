@@ -69,6 +69,17 @@ public class pattern1 {
 		}
 	}
 
+	public static void p7(int n) {
+		int num = 1;
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < i; j++) {
+				System.out.print(num + " ");
+				num++;
+			}
+			System.out.println();
+		}
+	}
+
 	public static void main(String[] args) {
 		p1(5);// hollow rectangle
 		p2(5);// pyramid
@@ -76,6 +87,7 @@ public class pattern1 {
 		p4(5);// inverted half pyramid
 		p5(5);
 		p6(5);
+		p7(5);
 
 	}
 }
