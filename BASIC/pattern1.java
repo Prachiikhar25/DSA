@@ -80,6 +80,36 @@ public class pattern1 {
 		}
 	}
 
+	public static void p8(int n) {
+		System.out.println();
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j <= i; j++) {
+				if ((i + j) % 2 == 0 || (i + j) == 0) {
+					System.out.print(1 + " ");
+				} else {
+					System.out.print(0 + " ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	public static void p9(int n) {
+		int[][] arr = new int[n][n]; // store pascal values
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j <= i; j++) {
+				if (j == 0 || j == i) {
+					arr[i][j] = 1;
+				} else {
+					arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j];
+				}
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
+
 	public static void main(String[] args) {
 		p1(5);// hollow rectangle
 		p2(5);// pyramid
@@ -87,7 +117,25 @@ public class pattern1 {
 		p4(5);// inverted half pyramid
 		p5(5);
 		p6(5);
-		p7(5);
+		p7(5);// Floyd's Triangle
+		p8(5);
+		p9(5);
 
 	}
 }
+
+// public static void p9(int n) {
+// int[][] arr = new int[n][n]; // store pascal values
+
+// for (int i = 0; i < n; i++) {
+// for (int j = 0; j <= i; j++) {
+// if (j == 0 || j == i) {
+// arr[i][j] = 1;
+// } else {
+// arr[i][j] = arr[i-1][j-1] + arr[i-1][j];
+// }
+// System.out.print(arr[i][j] + " ");
+// }
+// System.out.println();
+// }
+// }
