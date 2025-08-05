@@ -14,7 +14,18 @@ public class ChutmutPrograme {
         System.out.println("The GCD is :" + ans);
     }
 
+    static void EuclideanGCD(int a, int b) {
+        int temp = 0;
+        while (b != 0) {
+            temp = b;
+            b = a % b;
+            a = temp;
+        }
+        System.out.println("GCD BY EUCLIDEAN IS " + a);
+    }
+
     public static void main(String args[]) {
         GCD(27, 90);
+        EuclideanGCD(12, 18);
     }
 }
