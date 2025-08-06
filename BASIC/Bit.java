@@ -23,9 +23,20 @@ public class Bit {
 		System.out.println(not & n);
 	}
 
+	static void UpdateBit(int n, int pos, int op) {
+		int BitMask = 1 << pos;
+		if (op == 1) {
+			System.out.println(n | BitMask);
+		} else {
+			int newNumber = ~(BitMask);
+			System.out.println(newNumber & n);
+		}
+	}
+
 	public static void main(String[] args) {
 		GetBit(5, 2);// at pos get if the digit is 0 or 1
 		SetBit(5, 1);
 		ClearBit(5, 2);
+		UpdateBit(5, 1, 1);
 	}
 }
